@@ -28,6 +28,12 @@ mean_richness <- species_richness |>
 
 view(mean_richness)
 
-# part.3: Join the species richness data to the ipeds data.
+# part.3: 
+#---Levi---
+#Join the species richness data to the ipeds data.
+ipeds <- ipeds |>
+  left_join(mean_richness, by = "UNITID")
+
+colnames(ipeds) #check that the join worked
 
 #------
